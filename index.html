@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lập trình C++ · Trang chủ</title>
+  <meta name="description" content="Web dạy học C++: bài giảng 6 chương, bài tập 4 mức có lời giải, kiểm tra và thi chấm điểm trực tiếp.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,700..900&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- BÌA: tên tạp chí khổng lồ + tiêu đề + thẻ code minh họa việc chấm điểm -->
+    <section class="cover" aria-labelledby="cover-title">
+      <div class="cover-in">
+        <div class="cover-dateline"><span>Đồ án · Web dạy học C++</span><span>6 chương · 48 bài tập · chấm điểm tự động</span></div>
+        <p class="nameplate" aria-hidden="true">C++</p>
+
+        <div class="cover-copy">
+          <h1 class="display cover-title rise" id="cover-title" style="--d:.15s">Học C++ theo từng chương. <em>Nộp code, nhận điểm ngay.</em></h1>
+          <p class="cover-lede rise" style="--d:.25s">Bài giảng đầy đủ cho 6 chương, bài tập xếp 4 mức từ dễ đến khó kèm lời giải, và phòng thực hành nơi mỗi bài được chạy với 5 bộ test. Đúng mỗi bộ được 2 điểm.</p>
+          <div class="cover-actions rise" style="--d:.35s">
+            <a class="btn btn-primary" href="chuong.html?c=1">Bắt đầu Chương 1 <span data-icon="arrow-right"></span></a>
+            <a class="link-arrow" href="thuc-hanh.html">Vào phòng thực hành <span data-icon="arrow-right"></span></a>
+          </div>
+        </div>
+
+        <figure class="cover-art rise" style="--d:.45s" aria-label="Minh họa: một bài nộp được chạy với 5 bộ test và đạt 10 điểm">
+          <div class="codecard">
+            <div class="codecard-bar"><b>main.cpp</b><span class="desc"> · Tổng từ 1 đến n</span> <span class="tag-demo">Minh họa</span></div>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    long long n, tong = 0;
+    cin &gt;&gt; n;
+    for (int i = 1; i &lt;= n; i++) tong += i;
+    cout &lt;&lt; tong &lt;&lt; endl;
+    return 0;
+}</code></pre>
+            <div class="tests" id="demo-tests">
+              <!-- 5 ô test do home.js vẽ -->
+              <div class="score"><small>Điểm</small><b><span id="demo-score">0</span>/10</b></div>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- MỤC LỤC: menu trỏ đến các chương -->
+    <section class="section" id="muc-luc" aria-labelledby="toc-title">
+      <div class="wrap toc">
+        <div class="toc-head">
+          <h2 class="display" id="toc-title">Mục lục</h2>
+          <p>Mỗi chương gồm phần Lý thuyết (bài giảng và bài tập có lời giải) và phần Thực hành để kiểm tra, thi.</p>
+          <div class="toc-legend" id="legend"></div>
+        </div>
+        <ol class="toc-list" id="toc-list"></ol>
+      </div>
+    </section>
+
+    <!-- CÁCH HỌC -->
+    <section class="section method" aria-labelledby="method-title">
+      <div class="wrap">
+        <div class="method-head">
+          <h2 class="display" id="method-title">Đọc, làm, rồi nộp.</h2>
+          <p>Ba bước cho mỗi chương. Bạn có thể đi theo thứ tự hoặc nhảy thẳng tới phòng thực hành khi đã sẵn sàng.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <p class="step-word">Đọc</p>
+            <h3>Bài giảng từng chương</h3>
+            <p>Nội dung chia thành mục nhỏ, có ví dụ code chạy được và lưu ý về những lỗi sinh viên hay gặp.</p>
+          </div>
+          <div class="step">
+            <p class="step-word">Làm</p>
+            <h3>Bài tập 4 mức</h3>
+            <ul class="step-levels" id="step-levels"></ul>
+            <p>Lời giải mẫu và cách nghĩ được giấu sẵn, mở ra khi bạn cần đối chiếu.</p>
+          </div>
+          <div class="step">
+            <p class="step-word">Nộp</p>
+            <h3>Kiểm tra &amp; Thi</h3>
+            <p>Kiểm tra: chọn 1 bài. Thi: chọn 2 đến 3 bài. Code được chạy thật với bộ test của giáo viên.</p>
+            <p class="formula">5 test <span>×</span> 2 <span>=</span> 10 điểm</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

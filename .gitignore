@@ -1,0 +1,6 @@
+# File tạm của hệ điều hành / trình soạn thảo
+.DS_Store
+Thumbs.db
+.vscode/
+node_modules/
+*.log
