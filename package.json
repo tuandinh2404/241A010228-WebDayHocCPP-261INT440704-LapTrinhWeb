@@ -1,0 +1,13 @@
+{
+  "name": "web-day-hoc-cpp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web dạy học C++: bài giảng, bài tập có lời giải và phòng thực hành chấm điểm",
+  "scripts": {
+    "start": "node server.mjs",
+    "khoi-tao": "node server/khoi-tao.mjs"
+  },
+  "dependencies": {
+    "mysql2": "^3.24.6"
+  }
+}

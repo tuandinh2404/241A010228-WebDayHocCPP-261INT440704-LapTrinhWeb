@@ -82,7 +82,8 @@ export async function chamBai(code, tests, runner) {
 
   const chay = await runner(taoGoi(code, tests.map((t) => t.input)));
   if (chay.trangThai === "bienDich") return { diem: 0, toiDa, soDung: 0, bienDich: cat(String(chay.bienDich || "").trim(), 4000), tests: [] };
-  if (chay.trangThai === "loi" && !chay.stdout) return { diem: 0, toiDa, soDung: 0, loi: chay.thongBao || "Máy chấm gặp lỗi.", tests: [] };
+  // loiMay = máy chấm hỏng (không phải lỗi trong code SV) → API sẽ không ghi điểm, cho nộp lại
+  if (chay.trangThai === "loi" && !chay.stdout) return { diem: 0, toiDa, soDung: 0, loi: chay.thongBao || "Máy chấm gặp lỗi.", loiMay: true, tests: [] };
 
   const doc = docKetQua(chay.stdout);
   const kq = tests.map((t, i) => {
